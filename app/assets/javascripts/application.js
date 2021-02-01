@@ -20,6 +20,13 @@
 
 // Wait for turbolinks to load, then enable dropdown.
 $(document).on('turbolinks:load', function() { 
+  
   $('.ui.dropdown').dropdown();
+
+  $('.message .close')
+  .on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
+
 })
 
