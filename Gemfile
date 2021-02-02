@@ -27,7 +27,6 @@ gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem'hirb'
-gem 'rake' , '>= 0.9.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -64,7 +63,7 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rake'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
