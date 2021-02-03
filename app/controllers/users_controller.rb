@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_no_user, only: [:new, :create]
 
   def new
     @user = User.new
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome to Cody's Real-Time Messaging Application, #{@user.username}! You have successfully signed up."
-      redirect_to articles_path
+      redirect_to root_path
     else
       render 'new'
     end

@@ -15,4 +15,12 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
   end
+
+  def require_no_user
+    if logged_in?
+      flash[:error] = "You must be logged out to perform this action."
+      redirect_to root_path
+    end
+  end
+  
 end
