@@ -13,7 +13,7 @@
         <div class="field">
           <%= f.label :username, "Username" %>
           <div class="ui left icon input">
-            <%= f.text_field :username, placeholder: "Usermame" %>
+            <%= f.text_field :username, placeholder: "Username" %>
             <i class="user icon"></i>
           </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="middle aligned column">
       <div class="ui big button">
         <i class="signup icon"></i>
-        Sign Up
+        <%= link_to "Sign Up", signup_path %>
       </div>
     </div>
   </div>
